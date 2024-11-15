@@ -29,6 +29,7 @@ async function challengesApi() {
     "https://lernia-sjj-assignments.vercel.app/api/challenges"
   );
   const data = await response.json();
+  console.log(data);
   return data;
 }
  //Creating a function for generating the rooms, that also calls the challengesAPI function to get the data from the API.
@@ -36,12 +37,22 @@ async function generateRoom() {
   const data = await challengesApi();
   const roomData = data.challenges;
   const challenges__container = document.querySelector("#challenges__container");
+  const content__rooms = document.querySelector(".content__rooms");
+//If-statement to generate room based on which container they should be added. 
+  let container;
+  if (challenges__container) {
+    container = challenges__container;
+  } else if (content__rooms) {
+    container = content__rooms;
+    roomData.sort((a,b) => b.rating - a.rating); //Using sort to sort the rooms based on highest to lowest rating.
+    roomData.length = 3; //Takes the 3 first elements in the sorted array.
+  }
    //forEach loop that loops through the challenges array which is located in the data from the API.
   roomData.forEach((room) => {
-    //Creating a room with the same "structure" as in previous hardcoded HTML at index.html.
+    //Creating a room with the same "structure" as in previous hardcoded HTML, adds correct class depending on container and gets appended to the dynamic container variable.
     const challengesRoom = document.createElement("div");
-    challengesRoom.classList.add("challenges__room");
-    challenges__container.appendChild(challengesRoom);
+    challengesRoom.classList.add(content__rooms ? "content__room" : "challenges__room");
+    container.appendChild(challengesRoom);
     //Creating a div for the room inside the container
     const rooms = document.createElement("div");
     rooms.classList.add("room");
