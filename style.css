@@ -329,6 +329,13 @@
     max-width: 1280px;
   }
 }
+.content .content__room {
+  display: flex;
+  box-shadow: 0px 0px 10px 0px #b6bdb5;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  flex: 1;
+}
 .content .room__img {
   width: 100%;
 }
