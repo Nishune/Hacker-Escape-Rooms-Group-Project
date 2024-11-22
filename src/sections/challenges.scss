@@ -28,7 +28,7 @@
 }
 
 .modal__title {
-    margin: 30px 0 50px 30px
+    margin: 10px 0 30px 20px
 }
 
 .modal__p-text {
@@ -103,6 +103,7 @@
     z-index: 5;
     display: hidden;
 }
+
 #time_options {
     display: block;
 
@@ -112,9 +113,10 @@
 }
 .book_modal{
     background-color: white;
-    margin: auto;
+    margin: 0;
+    padding:0;
     border: 2px solid rgb(201, 200, 200);
-    width: 40%;
+    width: 35%;
     height: 60%; 
     position: fixed; 
     top: 20%; 
@@ -124,23 +126,20 @@
     display: hidden;
 }
 //title basic styling
-h4{
+.modal__title2{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
-    font-size: 19px;
+    font-size: 12px;
     line-height: 1.4em;
-    margin-left:10px;
-    text-align:start;
-   
     color:rgb(70, 69, 69);
-    
 }
 
 //name and email input form
 #name-text, #email-text {
     position: relative;
-    margin-left: 10px;
-    bottom:2px;
+    
+    left:20px;
+    bottom:30px;
     border-radius: 3px;
     border-color: rgb(201, 200, 200);
     border-style: solid;
@@ -151,35 +150,33 @@ h4{
 //booking and participants input form
 #booking-time , #time_options, #participants_number{
     position: relative;
-    margin-left: 10px;
-    bottom:2px;
+    left:20px;
+    bottom:10px;
     border-radius: 3px;
     border-color: rgb(201, 200, 200);
     border-style: solid;
     height: 30px;
     width: 150px;
 }
-//name and email p text
-.book_name, .book_email{
+.book_name , .book_email
+{
     font-size: 12px;
     font-weight: 600;
-    margin: 0 0 0 30px;
-    display:flex;
+    display:block;
     color:rgb(26, 26, 26);
     opacity: 75%;
-    margin-left: 10px;
+    margin-left: 20px;
+    top:30px;
     
-   
 }
 //time and participants p text
-.book_time , .participants-text{
+ .book_time , .participants-text{
     font-size: 12px;
     font-weight: 600;
-    margin: 0 0 0 30px;
-    display:flex;
+    display:block;
     color:rgb(26, 26, 26);
     opacity: 75%;
-    margin-left: 10px;
+    margin-left: 20px;
     
 }
 
@@ -188,12 +185,12 @@ h4{
         position: fixed;
         height: 36px;
         width: 130px;
-        background-color:#7f79e9;
+        background-color:#E3170A;
         border-radius: 5px;
         color: white;
         font-weight: 600;
-        left:59%;
-        top:70%;
+        left:55.5%;
+        top:73%;
         border:none;
         
     }
