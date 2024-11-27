@@ -1,4 +1,4 @@
-export default function filterType() {
+export function filterType() {
     const onlineChallenges = document.querySelector("#online-challenges");
     const onsiteChallenges = document.querySelector("#on-site-challenges");
 

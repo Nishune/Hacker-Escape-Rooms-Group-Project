@@ -24,7 +24,8 @@ export async function filterByRating() {
     if (firstStars && secondStars) {
       // This executes first star selection
       firstStarBtns.forEach((btn, idx1) => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
           firstStarSelection(idx1);
           // This code marks the star buttons selected for screen reader
           firstStarBtns.forEach((btn, idx2) => {
@@ -39,7 +40,8 @@ export async function filterByRating() {
 
       // This executes second star selection
       secondStarBtns.forEach((btn, idx1) => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
           secondStarSelection(idx1);
           // This code marks the star buttons selected for screen reader
           secondStarBtns.forEach((btn, idx2) => {

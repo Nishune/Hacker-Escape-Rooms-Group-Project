@@ -1,7 +1,4 @@
-import { filterByRating, resetForm } from "./rating_filter.js";
-import { filterByText } from "./textFilter.js";
-import filterType from "./type_filter.js";
-import { filterByLabel } from "./filterByLabel.js";
+import { allFilters } from "./allFilter.js";
 
 //variables.
 const menuButton = document.querySelector(".header__menu-button");
@@ -160,19 +157,10 @@ async function generateRoom() {
     roomActions.appendChild(button);
   });
 }
-// This hinders the submit functionality in filter form
-if (document.querySelector("#challenges__container")) {
-  const form = document.querySelector(".filter__form");
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-  });
-  resetForm();
-}
+
 generateRoom();
-filterByRating();
-filterType();
+
 //Calls the textfilter function, but only for the challenges__container which is located on challenges.html.
 if (document.querySelector("#challenges__container")) {
-  filterByText();
-  filterByLabel();
+  allFilters();
 }
