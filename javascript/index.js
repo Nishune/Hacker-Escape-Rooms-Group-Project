@@ -153,11 +153,30 @@ async function generateRoom() {
     if (room.type === "onsite") {
       button.textContent = "Book this room";
       button.classList.add("room__button--onsite");
-    } else if (room.type === "online") {
+    }
+    
+    
+    
+    else if (room.type === "online") {
       button.textContent = "Take challenge online";
       button.classList.add("room__button--online");
     }
     roomActions.appendChild(button);
+
+
+ //this is a test to add listener to a button to open modal 1//
+
+ if (room.type === "onsite" && room.title) {
+  button.addEventListener("click", async () => {
+    try {
+      const bookModal1 =  await import ("./bookroom1.js");
+      bookModal1.openModal("bookModal1",room.title); //call the function
+    } catch (error){
+      console.error("failed to open");
+    }
+  });
+}
+
   });
 }
 // This hinders the submit functionality in filter form

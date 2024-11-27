@@ -10,7 +10,7 @@ if(roomTitle && room2Title){
     room2Title.textContent = roomTitle.innerHTML= "Book room" 
     
 }
-roomTitle.innerHTML = "test"
+roomTitle.innerHTML = "test olala"
 //Event-listners.
 closeBooking1.addEventListener("click", hideWindow);
 
@@ -89,7 +89,7 @@ windowBooking1.addEventListener('click', () => {
 
 
 searchTimesBtn.addEventListener("click",() => {
-    windowBooking1.style.disply ="none";
+    windowBooking1.style.display ="none";
     Bookroom_modal.style.display ="flex";
 })
 overlay.addEventListener("click",() => {
@@ -97,3 +97,17 @@ overlay.addEventListener("click",() => {
 
 })
 
+export function openModal(bookModal1, roomTitle) {
+    console.log("hejsan snygging:", bookModal1);
+    const modal = document.querySelector(".modal");
+    const titleChallenge = modal.querySelector("room.title");
+    if(modal) {
+        modal.style.display = "flex";
+        
+        if (titleChallenge) {
+            titleChallenge.textContent = roomTitle;
+        }
+    } else {
+        console.error("modal is not found", bookModal1)
+    }
+}
