@@ -12,6 +12,9 @@
     padding: 3.1rem;
     height: 16.7rem;
   }
+  .fiiter__menu-item {
+    display: inline-block;
+  }
   .footer__company {
     margin-top: 0.3rem;
     @include breakpoint($large-screen-breakpoint) {
@@ -47,6 +50,9 @@
         text-decoration: none;
         font-size: 0.65rem;
         display: block;
+        &:hover {
+          color: $lightblue;
+        }
       }
     }
     .footer__menu--play {
@@ -58,6 +64,9 @@
         text-decoration: none;
         font-size: 0.65rem;
         display: block;
+        &:hover {
+          color: $lightblue;
+        }
       }
     }
   }
@@ -81,6 +90,9 @@
         text-decoration: none;
         font-size: 0.65rem;
         display: block;
+        &:hover {
+          color: $lightblue;
+        }
       }
     }
   }
