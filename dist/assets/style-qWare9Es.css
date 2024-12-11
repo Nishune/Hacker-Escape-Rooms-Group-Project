@@ -780,7 +780,9 @@
 
 .modal__content {
   background-color: white;
-  margin: auto;
+  position: fixed;
+  top: 20%;
+  left: 30%;
   padding: 20px;
   border: 2px solid rgb(201, 200, 200);
   width: 40%;
@@ -797,6 +799,7 @@
   left: 30%;
   color: rgb(26, 26, 26);
   opacity: 75%;
+  width: 85%;
   z-index: 4;
 }
 
@@ -858,13 +861,12 @@
   position: fixed;
   height: 40px;
   width: 50px;
-  background-color: white;
-  border-color: white;
+  background-color: #fff;
   border-style: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: 600;
-  top: 22%;
+  color: #636363;
+  cursor: pointer;
+  font-size: 200%;
+  top: 21%;
   right: 31%;
   z-index: 4;
 }
@@ -904,7 +906,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(112, 112, 112, 0.7);
-  z-index: 5;
+  z-index: 2;
   display: hidden;
 }
 
@@ -920,24 +922,26 @@
   background-color: white;
   margin: auto;
   border: 2px solid rgb(201, 200, 200);
+  padding: 20px;
   width: 40%;
-  height: 60%;
+  height: 68%;
   position: fixed;
   top: 20%;
   left: 30%;
-  z-index: 6;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 3;
   display: hidden;
 }
 .book_modal h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 0.8rem;
-  line-height: 1.4em;
-  margin: 30px 0 20px 30px;
-  text-align: start;
+  margin: 12px 0 25px 10px;
+  top: 20%;
+  left: 30%;
   color: rgb(26, 26, 26);
   opacity: 75%;
+  width: 85%;
+  z-index: 3;
 }
 
 #name-text,
@@ -952,7 +956,7 @@
   width: 250px;
 }
 
-#booking-time,
+#book_time,
 #time_options,
 #participants_number {
   position: relative;
@@ -1001,9 +1005,13 @@
   border-radius: 5px;
   color: white;
   font-weight: 600;
-  bottom: 22%;
+  bottom: 14%;
   right: 31%;
   border: none;
+}
+.booking_button:hover {
+  background-color: #c31409;
+  cursor: pointer;
 }
 
 .phone_number {
@@ -1029,23 +1037,6 @@
 .booking_button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-.booking_button {
-  position: fixed;
-  height: 36px;
-  width: 130px;
-  background-color: #e3170a;
-  border-radius: 5px;
-  color: white;
-  font-weight: 600;
-  bottom: 22%;
-  right: 31%;
-  border: none;
-}
-.booking_button:hover {
-  background-color: #c31409;
-  cursor: pointer;
 }
 
 .filter {
@@ -1227,6 +1218,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.4rem;
+  justify-content: center;
+}
+@media screen and (min-width: 1950px) {
+  .challenges #challenges__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .challenges .challenges__room {
   box-shadow: 0px 0px 10px 0px #b6bdb5;
@@ -1377,6 +1374,25 @@
   cursor: pointer;
 }
 
+#loadingIndicator {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+  border: 10px solid #36769d;
+  border-radius: 100%;
+  border-top: 10px solid #bd1408;
+  animation: colorbump 0.5s linear infinite;
+}
+
+@keyframes colorbump {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .about__title {
   text-align: center;
   font-size: 1.1rem;
@@ -1414,6 +1430,11 @@ body {
   max-width: 1500px;
   margin: auto;
   background-color: white;
+}
+@media screen and (min-width: 1950px) {
+  body {
+    min-width: 1800px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
