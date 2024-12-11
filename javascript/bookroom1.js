@@ -98,11 +98,11 @@ export function bookRoom() {
 }
 
 export function updateErrorText(errorMsg) {
-errorText.textContent=errorMsg;
-errorText.style.animation="none";
-void errorText.offsetWidth;
-errorText.style.animation="";
-return errorText;
+  errorText.textContent = errorMsg;
+  errorText.style.animation = "none";
+  void errorText.offsetWidth;
+  errorText.style.animation = "";
+  return errorText;
 }
 
 // Function to handle date input and fetch available slots

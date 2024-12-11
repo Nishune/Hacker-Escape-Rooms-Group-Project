@@ -1,11 +1,3 @@
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-   
- 
-});
-
 export function showLoadingIndicator() {
     let loadingIndicator = document.getElementById("loadingIndicator");
 
