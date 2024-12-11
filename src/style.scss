@@ -22,4 +22,8 @@ body {
   max-width: $max-screen-breakpoint;
   margin: auto;
   background-color: $white;
+
+  @include breakpoint($ultra-large-screen-breakpoint) {
+    min-width: 1800px;
+  }
 }

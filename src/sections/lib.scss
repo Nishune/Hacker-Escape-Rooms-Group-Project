@@ -12,6 +12,7 @@ $black: black;
 /*Screen size variables*/
 $large-screen-breakpoint: 1280px;
 $max-screen-breakpoint: 1500px;
+$ultra-large-screen-breakpoint: 1950px;
 /*Project button mixins*/
 @mixin blueButton {
   background-color: $lightblue;

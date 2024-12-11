@@ -9,6 +9,10 @@ import {
   availableTimeNow,
 } from "./bookroom2.js";
 import { generateModule3 } from "./bookroom3.js";
+import {
+  showLoadingIndicator,
+  hideLoadingIndicator,
+} from "./loadingindicator.js";
 
 async function generateRoom() {
   const data = await challengesApi();
@@ -17,6 +21,10 @@ async function generateRoom() {
     "#challenges__container"
   );
   const content__rooms = document.querySelector(".content__rooms");
+
+  if (!challenges__container && !content__rooms) {
+    return;
+  }
   //If-statement to generate room based on which container they should be added.
   let container;
   if (challenges__container) {
@@ -139,14 +147,23 @@ async function generateRoom() {
 }
 navigation();
 
-//Calls the textfilter function, but only for the challenges__container which is located on challenges.html.
-if (
-  document.querySelector("#challenges__container") ||
-  document.querySelector(".content__rooms")
-) {
-  generateRoom();
-}
+if (window.location.pathname.endsWith("/challenges.html")) {
+  navigation();
 
-if (document.querySelector("#challenges__container")) {
-  allFilters();
+  const challengesContainer = document.querySelector("#challenges__container");
+  if (challengesContainer || document.querySelector(".content__rooms")) {
+    showLoadingIndicator();
+
+    setTimeout(() => {
+      generateRoom();
+      hideLoadingIndicator();
+    }, 1000);
+  }
+
+  // Additional filters for #challenges__container
+  if (challengesContainer) {
+    allFilters();
+  }
+} else {
+  generateRoom();
 }
