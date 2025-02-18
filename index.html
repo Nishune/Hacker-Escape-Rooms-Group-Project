@@ -2,38 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Hacker Escape Room - Challenge yourself online or on-site.</title>
-    <meta
-      name="description"
-      content="Hacker Escape Room offers hacking-inspired challenges and puzzles for both organizations and a group of friends, online and on-site."
-    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hacker Escape Rooms Challenges</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-      property="og:title"
-      content="Hacker Escape Room - Challenge yourself online or on-site"
+      name="description"
+      content="Experience challenging escape rooms with a hacker theme. Book online or in-person rooms for an exciting adventure."
     />
-    <meta
-      property="og:description"
-      content="Play our hacker-inspired challenges online or on-site. Perfect for friends and team-building."
-    />
-    <meta
-      property="og:image"
-      content="https://nishune.github.io/Hacker_Escape_Room_Website/img/img1mobile.png"
-    />
-    <meta
-      property="og:url"
-      content="https://nishune.github.io/Hacker_Escape_Room_Website/"
-    />
-    <meta property="og:type" content="website" />
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Kritisk CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts - optimerad laddning -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+
+    <!-- Font Awesome - optimerad laddning -->
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
     />
+
+    <!-- Fallback för browsers utan JavaScript -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
   <body>
     <header class="header">
@@ -41,20 +52,20 @@
       <div class="header__container">
         <img
           class="header__logo"
-          src="./icons/MobileLogo.png"
+          src="./icons/MobileLogo.webp"
           alt="Hacker Escape rooms logo."
         />
         <h1 class="header__title">Hacker Escape Rooms</h1>
         <div class="header__menu-icon">
           <button class="header__menu-button">
-            <img src="./icons/mobilemenu.png" alt="Menu icon" />
+            <img src="./icons/mobilemenu.webp" alt="Menu icon" />
           </button>
         </div>
       </div>
       <nav class="header__navigation">
         <div class="header__navigation-icon">
           <button class="header__navigation-close">
-            <img src="./icons/mobilemenuclose.png" />
+            <img src="./icons/mobilemenuclose.webp" />
           </button>
         </div>
         <ul class="header__menu">
@@ -77,12 +88,12 @@
       <section class="introduction">
         <img
           class="introduction__image introduction__image--mobile"
-          src="./img/img1mobile.png"
+          src="./img/img1mobile.webp"
           alt="Hacker sitting in front of a computer on mobile view."
         />
         <img
           class="introduction__image introduction__image--desktop"
-          src="./img/img1desktop.png"
+          src="./img/img1desktop.webp"
           alt="Hacker sitting in front of a computer on desktop view."
         />
         <div class="introduction__buttons">
@@ -98,7 +109,7 @@
             <div class="reviews__item reviews__item--first">
               <img
                 class="reviews__user"
-                src="./img/userDesktop.png"
+                src="./img/userDesktop.webp"
                 alt="Profile picture of a user"
               />
               <div class="reviews__content">
@@ -114,7 +125,7 @@
             <div class="reviews__item reviews__item--second">
               <img
                 class="reviews__user"
-                src="./img/userDesktop.png"
+                src="./img/userDesktop.webp"
                 alt="Profile picture of a user"
               />
               <div class="reviews__content">
@@ -158,7 +169,7 @@
           <div class="play__image play__image--first">
             <img
               class="play__img"
-              src="./img/playfirstimg.png"
+              src="./img/playfirstimg.webp"
               alt="People working in front of a computer"
             />
           </div>
@@ -177,7 +188,7 @@
           <div class="play__image play__image--second">
             <img
               class="play__img"
-              src="./img/playsecondimg.png"
+              src="./img/playsecondimg.webp"
               alt="Woman working in front of a computer"
             />
           </div>

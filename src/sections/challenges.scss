@@ -321,7 +321,7 @@
       }
     }
 
-    & h3 {
+    & h1 {
       font-size: 1.8rem;
       font-weight: 400;
       margin: 1.5rem auto;
@@ -466,9 +466,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.4rem;
     justify-content: center;
+    min-height: 400px;
 
     @include breakpoint($ultra-large-screen-breakpoint) {
-    grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
@@ -476,6 +477,7 @@
     box-shadow: 0px 0px 10px 0px rgba($gray, 1);
     border-radius: 0.4rem;
     width: 13rem;
+    min-height: 300px;
     overflow: hidden;
     &:hover {
       box-shadow: 0px 0px 10px 5px rgba($gray, 1);
@@ -490,11 +492,14 @@
   .room__image-container {
     position: relative;
     width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
   }
 
   .room__img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
   }
 
@@ -506,6 +511,7 @@
     align-items: center;
     gap: 0.2rem;
     padding: 0;
+    min-height: 1rem;
   }
   .room__stars i {
     color: $red;
@@ -516,6 +522,19 @@
     top: 0.7rem;
     right: 0.7rem;
     color: $red;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .room__type-icon i {
+    display: inline-block; // eller block, se nedan
+    font-size: 1rem; // ikonen blir 1rem hög
+    line-height: 1rem; // matchar höjden
+    width: 1rem;
+    height: 1rem;
+    text-align: center; // centrera symbolen i rutan
   }
 
   .room__heading {
@@ -606,23 +625,25 @@
     cursor: pointer;
   }
 }
-#loadingIndicator{
-  
-  margin-left:auto;
-  margin-right:auto;
-  
-  
+#loadingIndicator {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
   border: 10px solid #36769d;
   border-radius: 100%;
   border-top: 10px solid #bd1408;
-  
-  
   animation: colorbump 0.5s linear infinite;
+  z-index: 9999;
 }
 
 @keyframes colorbump {
-  0%{transform:rotate(10deg);}
-  100%{transform:rotate(360deg);}
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

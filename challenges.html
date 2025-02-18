@@ -1,19 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Hacker Escape Rooms - Challenges</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <meta
+      name="description"
+      content="Experience challenging escape rooms with a hacker theme. Book online or in-person rooms for an exciting adventure."
+    />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Din primära CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts med font-display=swap -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=optional"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome direkt -->
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
     />
+
+    <!-- Fallback för browsers utan JavaScript -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=optional"
+        rel="stylesheet"
+      />
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
 
   <body>
@@ -22,20 +49,20 @@
       <div class="header__container">
         <img
           class="header__logo"
-          src="./icons/MobileLogo.png"
+          src="./icons/MobileLogo.webp"
           alt="Hacker Escape rooms logo."
         />
         <h1 class="header__title">Hacker Escape Rooms</h1>
         <div class="header__menu-icon">
           <button class="header__menu-button">
-            <img src="./icons/mobilemenu.png" alt="Menu icon" />
+            <img src="./icons/mobilemenu.webp" alt="Menu icon" />
           </button>
         </div>
       </div>
       <nav class="header__navigation">
         <div class="header__navigation-icon">
           <button class="header__navigation-close">
-            <img src="./icons/mobilemenuclose.png" />
+            <img src="./icons/mobilemenuclose.webp" />
           </button>
         </div>
         <ul class="header__menu">
@@ -55,11 +82,11 @@
       </nav>
     </header>
     <section class="filter">
-      <h3>Our challenges</h3>
+      <h1>Our challenges</h1>
       <button type="button" class="filter__button">Filter challenges</button>
       <form class="filter__form">
         <img
-          src="./icons/filterModalCloseButton.png"
+          src="./icons/filterModalCloseButton.webp"
           alt="Filter modal close button"
           class="filter__form__close-button"
         />
@@ -203,9 +230,9 @@
     </section>
     <footer class="footer">
       <div class="footer__company">
-        <h3 class="footer__heading footer__heading--company">
+        <h1 class="footer__heading footer__heading--company">
           [Esc] Hacker Escape Rooms
-        </h3>
+        </h1>
         <p class="footer__text">
           Quodsi haberent magnalia inter potentiam et divitias, et non illam
           quidem haec eo spectant haec quoque vos omnino desit illud quo solo
@@ -213,7 +240,7 @@
         </p>
       </div>
       <div class="footer__contact">
-        <h3 class="footer__heading footer__heading--contact">Site map</h3>
+        <h1 class="footer__heading footer__heading--contact">Site map</h1>
         <ul class="footer__menu footer__menu--contact">
           <li class="footer__menu-item">
             <a href="#" class="footer__menu-link">The story</a>
@@ -235,7 +262,7 @@
         </ul>
       </div>
       <div class="footer__media">
-        <h3 class="footer__heading footer__heading--media">Follow us on</h3>
+        <h1 class="footer__heading footer__heading--media">Follow us on</h1>
         <ul class="footer__menu footer__menu--media">
           <li class="footer__menu-item">
             <a href="#" class="footer__menu-link">Facebook</a>

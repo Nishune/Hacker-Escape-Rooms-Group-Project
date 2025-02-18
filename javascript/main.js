@@ -36,7 +36,7 @@ async function generateRoom() {
   }
   container.innerHTML = "";
   //forEach loop that loops through the challenges array which is located in the data from the API.
-  roomData.forEach((room) => {
+  roomData.forEach((room, index) => {
     //Creating a room with the same "structure" as in previous hardcoded HTML, adds correct class depending on container and gets appended to the dynamic container variable.
     const challengesRoom = document.createElement("div");
     challengesRoom.classList.add(
@@ -68,6 +68,7 @@ async function generateRoom() {
     img.classList.add("room__img");
     img.src = room.image;
     img.alt = `Picture of the room ${room.title}`;
+
     imageContainer.appendChild(img);
     //Creating a div to hold the icons
     const iconContainer = document.createElement("div");
@@ -82,7 +83,7 @@ async function generateRoom() {
     iconContainer.appendChild(roomIcon);
     imageContainer.appendChild(iconContainer);
     //adding heading for each room
-    const heading = document.createElement("h3");
+    const heading = document.createElement("h1");
     heading.classList.add("room__heading");
     heading.textContent = `${room.title} (${room.type})`;
     rooms.appendChild(heading);
@@ -152,13 +153,15 @@ if (window.location.pathname.endsWith("/challenges.html")) {
 
   const challengesContainer = document.querySelector("#challenges__container");
   if (challengesContainer || document.querySelector(".content__rooms")) {
-    showLoadingIndicator();
-
-    setTimeout(() => {
-      generateRoom();
+    try {
+      showLoadingIndicator();
+      await generateRoom();
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
       hideLoadingIndicator();
-    }, 1000);
-  }
+    }
+  } //removed timer
 
   // Additional filters for #challenges__container
   if (challengesContainer) {
